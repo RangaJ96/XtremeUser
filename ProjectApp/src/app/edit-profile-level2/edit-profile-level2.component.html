@@ -1,0 +1,82 @@
+<div class="container">
+  <form #level0Form="ngForm" (ngSubmit)="onSubmitData()">
+      <!-- l0UserEmail,l0FirstName,l0LastName,l0NIC,l0Telephone,l0Address,l0Password,instituteEmail -->
+      <div class="row">
+          <div class="col-md-1"></div>
+          <div class="input-field col m10">
+            <input id="level2Email" type="text" class="validate" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" name="emailLevel2" [(ngModel)]="emailLevel2">
+            <label for="level2Email">Email</label>
+          </div>
+          <div class="col-md-1"></div>
+        </div>
+
+    <div class="row">
+      <div class="col-md-1"></div>
+      <!-- <div class="col-md-2 m-3">Institute Name</div> -->
+      
+      <div class="input-field col m10">
+        <input id="FirstName" type="text" class="validate" name="firstNameLevel2" [(ngModel)]="firstNameLevel2">
+        <label for="FirstName">First Name</label>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="input-field col m10">
+        <input id="lastName" type="text" class="validate" name="lastNameLevel2" [(ngModel)]="lastNameLevel2">
+        <label for="lastName">Last Name</label>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="input-field col m10">
+        <input id="nic" type="text" class="validate" name="nicLevel2" [(ngModel)]="nicLevel2">
+        <label for="nic">NIC</label>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="input-field col m10">
+        <input id="level2telephone" type="text" class="validate" maxlength="10" name="telephoneLevel2" [(ngModel)]="telephoneLevel2">
+        <label for="level2telephone">Telephone No</label>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="input-field col m10">
+        <input id="level2address" type="text" class="validate" name="addressLevel2" [(ngModel)]="addressLevel2">
+        <label for="level2address">Address</label>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+
+<!-- 
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="input-field col m10">
+        <input id="province" type="text" class="validate">
+        <label for="province">Province</label>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="input-field col m10">
+        <input id="city" type="text" class="validate">
+        <label for="city">City</label>
+      </div>
+      <div class="col-md-1"></div>
+    </div> -->
+    
+    <button class="btn btn-success" type="submit">Save Changes</button>
+  </form>
+</div>

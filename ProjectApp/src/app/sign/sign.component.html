@@ -1,0 +1,103 @@
+<div class="container-fluid" id="section">
+  <div class="row">
+    <!-- <h1 style="text-align: center;">Sri Lankan Research Network Tool</h1> -->
+  </div>
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10 pt-2">
+      <h1 style="text-align: center;font-family: Arial, Helvetica, sans-serif;color: lightseagreen;">Sri Lankan Research Network Tool</h1>
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4 card text-center bg-dark">
+      <div class="card-header">
+        <ul class="nav nav-tabs card-header-tabs">
+          <li class="nav-item">
+            <a class="nav-link p-2 sI" (click)="onClickSignIn()" style="color:white;" [ngClass]="{signInDisable:signIn}">Sign In</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link sU" (click)="onClickSignUp()" style="color:white;" [ngClass]="{signUpActive:signUp}">Sign Up</a>
+          </li>
+        </ul>
+      </div>
+      <div id="ajax-effect">
+      <app-signin *ngIf="signIn"></app-signin>
+      <!-- <app-sign-up></app-sign-up> -->
+      <app-sign-up-selector *ngIf="signUp"></app-sign-up-selector>
+    </div>
+      <!-- <div class="container p-5">
+          <form>
+            <div class="row">
+              <div class="col-md-2"><i class="material-icons">account_circle</i></div>
+              <div class="col-md-10 p-2"><input class="form-control" placeholder="User name"></div>
+            </div>
+            <div class="row">
+              <div class="col-md-2"><i class="material-icons">vpn_key</i></div>
+              <div class="col-md-10 p-2"><input class="form-control" placeholder="Password"></div>
+            </div>
+            <div class="row p-2">
+              <div class="col-md-1"></div>
+              <div class="col-md-10">
+                <button class="btn btn-success" id="btnIn">Sign in</button>
+              </div>
+              <div class="col-md-1"></div>
+            </div>
+          </form>
+        </div> -->
+<!-- 
+      <div class="container p-5">
+        <form>
+          <div class="row">
+            <div class="col-md-2"><i class="material-icons">account_circle</i></div>
+            <div class="col-md-10 p-2"><input class="form-control" placeholder="User name"></div>
+          </div>
+          <div class="row">
+            <div class="col-md-2"><i class="material-icons">email</i></div>
+            <div class="col-md-10 p-2"><input class="form-control" placeholder="Email"></div>
+          </div>
+          <div class="row">
+            <div class="col-md-2"><i class="material-icons">vpn_key</i></div>
+            <div class="col-md-10 p-2"><input class="form-control" placeholder="Password"></div>
+          </div>
+          <div class="row">
+            <div class="col-md-2"><i class="material-icons">vpn_key</i></div>
+            <div class="col-md-10 p-2"><input class="form-control" placeholder="Confirm password"></div>
+          </div>
+          <div class="row p-2">
+            <div class="col-md-9">
+
+            </div>
+            <div class="col-md-3">
+              <button class="btn btn-success">Sign in</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="container p-5">
+        <div class="row p-2">
+          <div class="col-md-4"></div>
+          <div class="col-md-4">
+            <button class="btn btn-success">Register as a Researcher</button>
+          </div>
+          <div class="col-md-4"></div>
+        </div>
+        <div class="row p-2">
+          <div class="col-md-4"></div>
+          <div class="col-md-4">
+            <button class="btn btn-success">Register as a Institute</button>
+          </div>
+          <div class="col-md-4"></div>
+        </div>
+
+
+      </div> -->
+    </div>
+    <div class="col-md-3">
+
+    </div>
+  </div>
+
+</div>

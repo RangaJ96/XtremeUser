@@ -1,0 +1,27 @@
+<div class="container">
+  <form #formEditLogin="ngForm" (submit)="onClickSubmit()">
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="input-field col m10">
+        <input id="level0UserName" type="text" class="validate" name="userNameLevel0" [(ngModel)]="userNameLevel0">
+        <label for="level0UserName">User Name</label>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="input-field col m10">
+        <input id="level0password" type="password" class="validate" name="passwordLevel0" [(ngModel)]="passwordLevel0">
+        <label for="level0password">Password</label>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-11">
+          <button class="btn btn-dark submit" type="submit">Save Changes</button>
+      </div>
+    </div>
+  </form>
+</div>

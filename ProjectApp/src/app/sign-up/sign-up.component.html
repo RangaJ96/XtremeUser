@@ -1,0 +1,138 @@
+<!-- <div class="container-fluid">
+  <div class="row" id="s1">
+    <div class="section1">
+      
+    </div>
+    <div class="container p-5 section2">
+        
+          <div class="row">
+              <div class="col-md-1"></div>
+              <div class="col-md-10"><h2>REGISTER YOUR INSTITUTE IN</h2></div>
+              <div class="col-md-1"></div>
+            </div>
+          <div class="row mb-6">
+              <div class="col-md-1"></div>
+              <div class="col-md-10"><h2>SRI LANKAN RESEARCH TOOL</h2></div>
+              <div class="col-md-1"></div>
+            </div>
+      <form #signUpForm="ngForm" (ngSubmit)="onSubmitClick()"> -->
+
+
+        <!-- <div class="row">
+          <div class="col-md-1"><i class="material-icons">account_circle</i></div>
+          <div class="col-md-10"><input class="form-control" placeholder="User name"></div>
+        </div> -->
+        <!-- <div class="row">
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-4"><i class="material-icons">account_circle</i></div>
+              <div class="col-md-8"><input class="form-control" placeholder="First Name"></div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-4"><i class="material-icons">account_circle</i></div>
+              <div class="col-md-8"><input class="form-control" placeholder="Last Name"></div>
+            </div>
+          </div>
+        </div> -->
+        <!-- <div class="row m-1 mt-3">
+          <div class="col-md-1"><i class="material-icons inp">email</i></div>
+          <div class="col-md-10"><input class="form-control" placeholder="Institute email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" name="instituteEmail" (ngModel)="instituteEmail" #email required></div>
+        </div> -->
+        <!-- <div class="row m-1">
+          <div class="col-md-1"><i class="material-icons">vpn_key</i></div>
+          <div class="col-md-10"><input class="form-control" placeholder="Password" name="password" (ngModel)="password" required></div>
+        </div> -->
+        
+
+        <!-- <div class="row m-1">
+          <div class="col-md-1"><i class="material-icons">vpn_key</i></div>
+          <div class="col-md-10"><input class="form-control" placeholder="Confirm password" name="passwordConfirm" (ngModel)="passwordConfirm" required></div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <input value="Alvin" id="first_name2" type="text" class="validate">
+            <label class="active" for="first_name2">First Name</label>
+          </div>
+        </div> -->
+
+
+        <!-- <div class="row">
+          <div class="input-field col s12">
+            <input id="instituteUserName" type="text" class="validate" name="instituteUserName" [(ngModel)]="instituteUserName" required>
+            <label for="instituteUserName">Institute User Name</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="email" type="email" class="validate" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" name="instituteEmail" [(ngModel)]="instituteEmail" required>
+            <label for="email">Institute Email</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="password" type="password" class="validate" name="institutePassword" [(ngModel)]="institutePassword" required>
+            <label for="password">Password</label>
+          </div>
+        </div> -->
+
+
+        <!-- <div class="row">
+          <div class="input-field col s12" [ngClass]="{s:institutePassword!=institutePasswordConfirm && con.dirty}">
+            <input id="passwordConfirm" type="text" class="validate s" name="institutePasswordConfirm" [(ngModel)]="institutePasswordConfirm" formControlName="con">
+            <label for="passwordConfirm">Confirm password</label>
+          </div>
+          <div >wrong</div>
+        </div> -->
+        
+        <!-- <div class="row p-2 m-1">
+          <div class="col-md-9">
+
+          </div>
+          <div class="col-md-3">
+            <button class="btn btn-success" type="submit" [disabled]="signUpForm.invalid">Sign Up</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div> -->
+
+
+<div class="container p-5">
+  <form #signUpForm="ngForm" (ngSubmit)="onSubmitClick()">
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="material-icons prefix">account_circle</i>
+        <input id="instituteUserName" type="text" class="validate" name="instituteUserName"
+          [(ngModel)]="instituteUserName" required>
+        <label for="instituteUserName">Institute User Name</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="material-icons prefix">email</i>
+        <input id="email" type="email" class="validate" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+          name="instituteEmail" [(ngModel)]="instituteEmail" required>
+        <label for="email">Institute Email</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="material-icons prefix">vpn_key</i>
+        <input id="password" type="password" class="validate" name="institutePassword" [(ngModel)]="institutePassword"
+          required>
+        <label for="password">Password</label>
+      </div>
+    </div>
+    <div class="row p-2">
+      <div class="col-md-9">
+
+      </div>
+      <div class="col-md-3">
+        <button class="btn btn-success" type="submit" [disabled]="signUpForm.invalid">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</div>

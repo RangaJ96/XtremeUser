@@ -1,0 +1,14 @@
+<!--<h4>Content from Server</h4>
+{{board}}
+{{errorMessage}}
+-->
+<div class="container content">
+    <div class="row">
+      <div class="card m-4" *ngFor="let notification of notificationList" style="width: 320px;height:200px;">
+        <h4 style="text-align: center;">{{notification.instituteUserName}}</h4>
+        <!-- {{noOfNotifications}} -->
+        <button class="btn btn-dark" (click)="onClickAccept(notification.instituteUserName)">Accept Request</button>
+      </div>
+    </div>
+  </div>
+  

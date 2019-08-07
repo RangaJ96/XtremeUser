@@ -1,0 +1,21 @@
+<div class="container">
+  <form #formAddLevel1="ngForm" (ngSubmit)="onClickSubmit()">
+      <div class="row">
+          <div class="col-md-1"></div>
+          <div class="input-field col m10">
+            <input id="level1Email" type="email" class="validate" name="level1Email" [(ngModel)]="level1Email" required>
+            <label for="level1Email">Email of level1 Employee</label>
+          </div>
+          <div class="col-md-1"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-11">
+                <button class="btn btn-dark submit" type="submit" [disabled]="formAddLevel1.invalid">Add Level1 Employee</button>
+            </div>
+            <div class="alert-success m-2" *ngIf="memberSuccess">Level 1 employee has been added..</div>
+            <div class="alert-danger m-2" *ngIf="memberFail">Level 1 employee has not been added..</div>
+          </div>
+  </form>
+</div>

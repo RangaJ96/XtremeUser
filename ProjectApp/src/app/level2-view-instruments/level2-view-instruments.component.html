@@ -1,0 +1,35 @@
+<div class="container">
+  <form #instrumentAddingForm="ngForm" (ngSubmit)="onSubmitData()">
+
+    <ul *ngFor="let instrument of instruments">
+      <li>
+        <div class="card">
+          <table>
+            <thead>
+              <th>Instrument Name</th>
+              <th>Instrument Model No</th>
+              <th>Instrument manufacturing Date</th>
+              <th>Institute Email</th>
+              <th>Email of the Guardian of the instrument</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{instrument.instrumentName}}</td>
+                    <td>{{instrument.modelNo}}</td>
+                    <td>{{instrument.manufacturingDate | date}}</td>
+                    <td>{{instrument.institute.instituteEmail}}</td>
+                    <td>{{instrument.level2.l2UserEmail}}</td>
+                  </tr>
+            </tbody>
+          </table>
+          
+        </div>
+      </li>
+    </ul>
+    <div class="row">
+      
+    </div>
+
+    <!-- <button type="submit" class="btn btn-success">Add Instrument</button> -->
+  </form>
+</div>

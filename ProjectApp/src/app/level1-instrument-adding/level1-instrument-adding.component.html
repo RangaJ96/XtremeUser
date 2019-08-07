@@ -1,0 +1,53 @@
+<div class="container">
+  <form #instrumentAddingForm="ngForm" (ngSubmit)="onSubmitData()">
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="input-field col m10">
+        <input id="instrumentName" type="text" class="validate" name="instrumentName" [(ngModel)]="instrumentName" required>
+        <label for="instrumentName">Instrument Name</label>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="input-field col m10">
+        <input id="modelNo" type="text" class="validate" name="modelNo" [(ngModel)]="modelNo" required>
+        <label for="modelNo">Model No</label>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="input-field col m10">
+        <input id="manufacturingDate" type="date" class="validate" name="manufacturingDate" [(ngModel)]="manufacturingDate" required>
+        <label for="manufacturingDate">manufacturing Date</label>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="input-field col m10">
+        <input id="level2Email" type="email" class="validate" name="level2Email" [(ngModel)]="level2Email" required>
+        <label for="level2Email">Email of level1 Employee</label>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+
+<!-- 
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="input-field col m10">
+        <input id="instituteAddress" type="text" class="validate">
+        <label for="instituteAddress">Address</label>
+      </div>
+      <div class="col-md-1"></div>
+    </div> -->
+
+    <button type="submit" class="btn btn-dark" [disabled]="instrumentAddingForm.invalid">Add Instrument</button>
+    <div class="alert-success" *ngIf="memberSuccess">Instrument has been added..</div>
+    <div class="alert-danger" *ngIf="memberFail">Instrument has not been added..</div>
+  </form>
+</div>
