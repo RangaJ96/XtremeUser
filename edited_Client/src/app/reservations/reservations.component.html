@@ -1,0 +1,80 @@
+<div class="card my-5">
+    <div class="card-body">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Instrument_ID</th>
+            <th scope="col">Rec Date</th>
+            <th scope="col">Instrument Name</th>
+            <th scope="col">Instiute Name</th>
+            <th scope="col">Reservation Method</th>
+            <th scope="col">Paid Amount</th>
+            <th scope="col">Instructor Name</th>
+            <th scope="col">Instructor Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td>{{ res.id }}</td>
+            <td>{{ res.date }}</td>
+            <td>{{ res.name }}</td>
+            <td>{{ res.Institute }}</td>
+            <td>{{ res.method }}</td>
+            <td>{{ res.amount }}</td>
+            <td>{{ res.Intname }}</td>
+            <td><a href="mailto:{{ user.email }}">{{ res.Intemail }}</a></td>
+          </tr>
+          <tr>
+              <td>0023</td>
+              <td>15/06/2019</td>
+              <td>High Density Microscope</td>
+              <td>SLINTECH</td>
+              <td>Pay</td>
+              <td>12 000LKR</td>
+              <td>Mr M.D Jayantha</td>
+              <td><a href="mailto:{{ user.email }}">jayanth88@slintech.com</a></td>
+            </tr>
+            <tr>
+                <td>0028</td>
+                <td>20/06/2019</td>
+                <td>Fourier Transform Infra-Red Spectrometer</td>
+                <td>SLINTECH</td>
+                <td>Pay</td>
+                <td>12 000LKR</td>
+                <td>Mr M.D Jayantha</td>
+                <td><a href="mailto:{{ user.email }}">jayanth88@slintech.com</a></td>
+              </tr>
+              <tr>
+                  <td>1200</td>
+                  <td>25/06/2019</td>
+                  <td>UV-Visible Spectrophotometer</td>
+                  <td>University of Moratuwa</td>
+                  <td>Pay</td>
+                  <td>12 000LKR</td>
+                  <td>Mr M.D Jayantha</td>
+                  <td><a href="mailto:{{ user.email }}">jayanth88@slintech.com</a></td>
+                </tr>
+                <tr>
+                    <td>0512</td>
+                    <td>20/06/2019</td>
+                    <td>Fluorescence Spectrophotometer</td>
+                    <td>NARA</td>
+                    <td>Pay</td>
+                    <td>12 000LKR</td>
+                    <td>Mr M.D Jayantha</td>
+                    <td><a href="mailto:{{ user.email }}">jayanth88@slintech.com</a></td>
+                  </tr>
+                  <tr>
+                      <td>0891</td>
+                      <td>20/06/2019</td>
+                      <td>X-Ray Fluorescence Spectrophotometer</td>
+                      <td>University of Colobmo</td>
+                      <td style="Color:blue">Colloboration</td>
+                      <td>12 000LKR</td>
+                      <td>Mr M.D Jayantha</td>
+                      <td><a href="mailto:{{ user.email }}">jayanth88@slintech.com</a></td>
+                    </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
