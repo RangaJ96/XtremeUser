@@ -1,0 +1,51 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<div class="rec">
+<div class="container">
+    <div style="tab-size: 40px; text-decoration-color: lightslategray ;color:red;"><p><b style="tab-size: 40rem"><h2 style="color: sienna">To Reserve an Eqipment Choose</h2></b><p></div>
+    <p>Make the viewport larger than 768px wide to see that all of the form elements are inline, left aligned, and the labels are alongside.</p>
+    <form class="form-inline">
+      <div class="form-group">
+          <mat-form-field>
+              <input matInput [matDatepicker]="picker2" placeholder="Choose a date">
+              <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+              <mat-datepicker #picker2></mat-datepicker>
+            </mat-form-field>
+      </div>
+      <div class="form-group">
+          <mat-form-field>
+              <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+      </div>
+      <div class="form-group">
+          <form class="example-form">
+              <input type="text" placeholder="Search for a street" [formControl]="control" [matAutocomplete]="auto">
+              <mat-autocomplete #auto="matAutocomplete">
+                <mat-option *ngFor="let street of filteredStreets | async" [value]="street">
+                  {{street}}
+                </mat-option>
+              </mat-autocomplete>
+            </form>
+      </div>
+      <div class="form-group">
+        <div class="example-button-row">
+  
+          <button mat-raised-button color="primary">Check for Avilability</button>
+          
+         <!-- <a mat-raised-button routerLink=".">Link</a>-->
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<app-rated-galarey></app-rated-galarey>
+
+  
+
+
+
+  

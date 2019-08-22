@@ -1,0 +1,313 @@
+<!-- Start header -->
+<header id="header">
+    <!-- header top search -->
+    <div class="header-top">
+      <div class="container">
+        <form action="">
+          <div id="search">
+          <input type="text" placeholder="Type your search keyword here and hit Enter..." name="s" id="m_search" style="display: inline-block;">
+          <button type="submit">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+        </form>
+      </div>
+    </div>
+    <!-- header bottom -->
+    <div class="header-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-sm-6 col-xs-6">
+            <div class="header-contact">
+              <ul>
+                <li>
+                  <div class="phone">
+                    <i class="fa fa-phone"></i>
+                  </div>
+                </li>
+                <li>
+                  <div class="mail">
+                    <i class="fa fa-envelope"></i>
+                  </div>
+                </li>
+                <li>
+                    <div class="mail">
+                      <i class="fa fa-facebook"></i>
+                    </div>
+                  </li>
+                  <li>
+                      <div class="mail">
+                        <i class="fa fa-pinterest"></i>
+                      </div>
+                    </li>
+                    <li>
+                        <div class="mail">
+                          <i class="fa fa-twitter"></i>
+                        </div>
+                      </li>
+                      <li>
+                          <div class="mail">
+                            <i class="fa fa-dribbble"></i>
+                          </div>
+                        </li>
+                        <li>
+                            <div class="mail">
+                              <i class="fa fa-linkedin"></i>
+                            </div>
+                          </li>
+                          <li>
+                              <div class="mail">
+                                <i class="fa fa-google-plus"></i>
+                              </div>
+                            </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-6">
+            <div class="header-login" routerLinkActive="active" *ngIf="!authority"  >
+              <!--<a class="login modal-form" data-target="#login-form" data-toggle="modal" href="#">Login / Sign Up</a>-->
+              <a class="login modal-form" target="_blank" routerLink="auth/login">Login / Sign Up</a>
+            </div>
+            <div class="header-login" routerLinkActive="active" *ngIf="authority"  >
+              <!--<a class="login modal-form" data-target="#login-form" data-toggle="modal" href="#">Login / Sign Up</a>-->
+              <a class="login modal-form" (click)="logout()" style="cursor: pointer;">Logout</a>
+              <a class="login modal-form" routerLink="auth/login/home">My Account</a>
+              <!--<button  (click)="logout()">Logout</button>
+               <a class="nav-link" href="javascript:void(0)" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="material-icons">notifications</i>
+                <span class="notification">10</span>
+                <p>
+                    <span class="d-lg-none d-md-block">Some Actions</span>
+                </p>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="javascript:void(0)">Mike John responded to your email</a>
+                <a class="dropdown-item" href="javascript:void(0)">You have 5 new tasks</a>
+                <a class="dropdown-item" href="javascript:void(0)">You're now friend with Andrew</a>
+                <a class="dropdown-item" href="javascript:void(0)">Another Notification</a>
+                <a class="dropdown-item" href="javascript:void(0)">Another One</a>
+            </div>
+  
+              
+              -->
+  
+              
+              <a class="login modal-form">
+                <div style="position: absolute;">
+                    
+              <mat-icon matBadge="{{count}}" matBadgeColor="warn" >notifications</mat-icon>
+                  
+                    
+            </div>
+            </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- End header -->
+  
+  
+  <!-- Start login modal window -->
+  <div aria-hidden="false" role="dialog" tabindex="-1" id="login-form" class="modal leread-modal fade in">
+    <div class="modal-dialog">
+      <!-- Start login section -->
+      <div id="login-content" class="modal-content">
+        <div class="modal-header">
+          <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span></button>
+          <h4 class="modal-title"><i class="fa fa-unlock-alt"></i>Login</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <input type="text" placeholder="User name" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" class="form-control">
+            </div>
+             <div class="loginbox">
+              <label><input type="checkbox"><span>Remember me</span></label>
+              <button class="btn signin-btn" type="button">SIGN IN</button>
+            </div>                    
+          </form>
+        </div>
+        <div class="modal-footer footer-box">
+          <a href="#">Forgot password ?</a>
+          <span>No account ? <a id="signup-btn" href="#">Sign Up.</a></span>            
+        </div>
+         <!--Google API-->
+         <div class="btn white darken-4 col s10 m4">
+          <a href="/users/google-oauth/" style="text-transform:none">
+            <div class="left">
+                <img width="20px" alt="Google &quot;G&quot; Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png"/>
+            </div>
+            Continue with Google
+            </a>
+         </div>
+          <script src="https://apis.google.com/js/api.js"></script>
+          <script src="https://apis.google.com/js/platform.js" async defer></script>
+         <!--End Google API-->
+      </div>
+      <!-- Start signup section -->
+      <div id="signup-content" class="modal-content">
+        <div class="modal-header">
+          <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span></button>
+          <h4 class="modal-title"><i class="fa fa-lock"></i>Sign Up</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <input placeholder="Name" class="form-control">
+            </div>
+            <div class="form-group">
+              <input placeholder="Username" class="form-control">
+            </div>
+            <div class="form-group">
+              <input placeholder="Email" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" class="form-control">
+            </div>
+            <div class="signupbox">
+              <span>Already got account? <a id="login-btn" href="#">Sign In.</a></span>
+            </div>
+            <div class="loginbox">
+              <label><input type="checkbox"><span>Remember me</span><i class="fa"></i></label>
+              <button class="btn signin-btn" type="button">SIGN UP</button>
+            </div>
+            <!--Google API-->
+            <div class="btn white darken-4 col s10 m4">
+            <a href="/users/google-oauth/" style="text-transform:none">
+              <div class="left">
+                  <img width="20px" alt="Google &quot;G&quot; Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png"/>
+              </div>
+              Continue with Google
+              </a>
+           </div>
+            <script src="https://apis.google.com/js/api.js"></script>
+            <script src="https://apis.google.com/js/platform.js" async defer></script>
+           <!--End Google API-->
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End login modal window -->
+  
+  <!--Intro-->
+  <div style="padding-top: 20px">
+    <div style="margin-left: 200px;margin-top: 20px;margin-bottom: 10px;padding-top: 20px"><h1>
+  
+    <strong>Sri Lankan Research Network Tool</strong></h1>
+    <p style="margin-left: 50px;">Sri lanka lagest technoloical equipment collection</p>
+  </div>
+  </div>
+  <!--End of Intro-->  
+  
+  <!-- BEGIN MENU -->
+  <section id="menu-area" routerLinkActive="active" *ngIf="!authority">      
+    <nav class="navbar navbar-default" role="navigation">  
+      <div class="container">
+        <div class="navbar-header">
+          <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- LOGO -->              
+          <!-- TEXT BASED LOGO -->
+          <a class="navbar-brand" href="index.html">Strat your project today</a>              
+          <!-- IMG BASED LOGO  -->
+           <!-- <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="logo"></a> -->
+        </div>
+        
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
+            <!--<li class="active"><a href="index">Home</a></li>-->
+            <li><a href="index">Home</a></li>
+            <li><a href="feature.html">Get Started</a></li>
+            <li><a href="service.html">Service</a></li>
+            <li><a href="portfolio.html">Learn About</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Developments<span class="fa fa-angle-down"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="blog-archive.html">Developments</a></li>                
+                <li><a href="blog-single-with-left-sidebar.html">Blog Single with Left Sidebar</a></li>
+                <li><a href="blog-single-with-right-sidebar.html">Blog Single with Right Sidebar</a></li>
+                <li><a href="blog-single-with-out-sidebar.html">Blog Single with out Sidebar</a></li>           
+              </ul>
+            </li>
+            <!--<li><a href="404.html">404 Page</a></li> -->              
+            <li><a href="contact.html">Contact</a></li>
+          </ul>                     
+        </div><!--/.nav-collapse -->
+      
+      
+      
+  
+        <a href="#" id="search-icon">
+          <i class="fa fa-search">            
+          </i>
+        </a>
+      </div>     
+    </nav>
+  </section>
+
+
+ <!-- BEGIN MENU -->
+ <section id="menu-area" routerLinkActive="active" *ngIf="authority">      
+    <nav class="navbar navbar-default" role="navigation">  
+      <div class="container">
+        <div class="navbar-header">
+          <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- LOGO -->              
+          <!-- TEXT BASED LOGO -->
+          <a class="navbar-brand" href="index.html">Strat your project today</a>              
+          <!-- IMG BASED LOGO  -->
+           <!-- <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="logo"></a> -->
+        </div>
+        
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
+            <!--<li class="active"><a href="index">Home</a></li>
+            <li><a href="index">Home</a></li>-->
+          <li><a routerLink="instr">Reserve Instrument</a></li>
+          <li><a routerLink="rec">My Reservations</a></li>
+          <li><a href="portfolio.html">Payment History</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Costamize Account<span class="fa fa-angle-down"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="blog-archive.html">Edit Profile</a></li>                
+              <li><a href="blog-single-with-left-sidebar.html">Privacy and Policies</a></li>
+              <li><a href="blog-single-with-right-sidebar.html">Deactivate Account</a></li>
+              <li><a href="blog-single-with-out-sidebar.html">Blog Single with out Sidebar</a></li>           
+            </ul>
+          </li>
+          <!--<li><a href="404.html">404 Page</a></li><li><a href="contact.html">Contact</a></li> -->              
+          
+          </ul>                     
+        </div><!--/.nav-collapse -->
+      
+      
+      
+  
+        <a href="#" id="search-icon">
+          <i class="fa fa-search">            
+          </i>
+        </a>
+      </div>     
+    </nav>
+  </section>
+
+  <div style=" width:100%; height: 90px; border-top:5px solid #AB987A;border-bottom:5px solid #AB987A; "></div>
+  <!-- END MENU --> 
+  
